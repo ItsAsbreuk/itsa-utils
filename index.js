@@ -1,5 +1,10 @@
+'use strict';
+
+var timers = require("./lib/timers");
+
 module.exports = {
-	idGenerator: require("./lib/idgenerator.js").idGenerator,
-    later: require("./lib/timers.js").later,
-    async: require("./lib/timers.js").async
+	idGenerator: require("./lib/idgenerator").idGenerator,
+    later: timers.later,
+    async: timers.async,
+    isNode: require("./lib/isnode")
 };
